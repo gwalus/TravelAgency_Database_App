@@ -19,7 +19,7 @@ namespace TravelAgency
     /// </summary>
     public partial class UpdateRecord : Window
     {
-        ColumnNames columnNames = new ColumnNames();
+        
         int index;
         string recordToUpdate;
 
@@ -30,35 +30,35 @@ namespace TravelAgency
             index = mainWindow.comboBox.SelectedIndex;
             recordToUpdate = indexToUpdate;
 
-            switch (index)
-            {
-                case 0:
-                    this.DataContext = columnNames.klienci;
-                    break;
-                case 1:
-                    this.DataContext = columnNames.uczestnicy;
-                    break;
-                case 2:
-                    this.DataContext = columnNames.zamowienia;
-                    break;
-                case 3:
-                    this.DataContext = columnNames.wycieczki;
-                    break;
-                case 4:
-                    this.DataContext = columnNames.hotele;
-                    break;
-                case 5:
-                    this.DataContext = columnNames.rezydenci;
-                    break;
-                case 6:
-                    this.DataContext = columnNames.uslugi;
-                    break;
-                case 7:
-                    this.DataContext = columnNames.atrakcje;
-                    break;
-                default:
-                    break;
-            }
+            //switch (index)
+            //{
+            //    case 0:
+            //        this.DataContext = ColumnNames.klienci;
+            //        break;
+            //    case 1:
+            //        this.DataContext = ColumnNames.uczestnicy;
+            //        break;
+            //    case 2:
+            //        this.DataContext = ColumnNames.zamowienia;
+            //        break;
+            //    case 3:
+            //        this.DataContext = ColumnNames.wycieczki;
+            //        break;
+            //    case 4:
+            //        this.DataContext = columnNames.hotele;
+            //        break;
+            //    case 5:
+            //        this.DataContext = columnNames.rezydenci;
+            //        break;
+            //    case 6:
+            //        this.DataContext = columnNames.uslugi;
+            //        break;
+            //    case 7:
+            //        this.DataContext = columnNames.atrakcje;
+            //        break;
+            //    default:
+            //        break;
+            //}
         }
 
         private void ButtonUpdateRecord_Click(object sender, RoutedEventArgs e)

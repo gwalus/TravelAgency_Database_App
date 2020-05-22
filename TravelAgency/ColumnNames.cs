@@ -6,20 +6,19 @@ using System.Threading.Tasks;
 
 namespace TravelAgency
 {
-    public class ColumnNames
+    public static class ColumnNames
     {
-        public string[] klienci = { "Imię", "Nazwisko", "Pesel", "Adres", "Miasto", "Kod pocztowy", "Kraj", "Telefon", "Email", "Nazwa firmy", "Regon" };
-        public string[] uczestnicy = { "Imię", "Nazwisko", "Pesel", "Data urodzenia", "Miejsce urodzenia", "Adres", "Miasto", "Kod pocztowy", "Kraj", "Telefon"};
-        public string[] zamowienia = { "Data zamówienia", "Ilość miejsc", "Status", "Data płatności", "Typ płatności"};
-        public string[] wycieczki = { "Kraj", "Cena za osobe", "Ilość dostępnych miejsc", "Ilość miejsc", "Data wyjazdu", "Data powrotu" };
-        public string[] rezydenci = { "Imię", "Nazwisko", "Telefon", "Adres", "Miasto", "Kraj", "Email" };
-        public string[] uslugi = { "Wyżywienie", "Ubezpieczenie", "Bagaż" };
-        public string[] atrakcje = { "Rodzaj" };
-        public string[] hotele = { "Nazwa", "Standard", "Kraj", "Miasto", "Adres", "Telefon", "Witryna" };
+        public static string[] klienci = { "Imię", "Nazwisko", "Pesel (11-cyfrowy)", "Adres", "Miasto", "Kod pocztowy (**-***)", "Kraj", "Telefon ([5-9]********)", "Email (*@domena.com)", "Nazwa_firmy", "Regon" };
+        public static string[] uczestnicy = { "ID klienta", "Imię", "Nazwisko", "Pesel (11-cyfowy)", "Data urodzenia (YYYY-MM-DD)", "Miejsce urodzenia", "Adres", "Miasto", "Kod pocztowy (**-***)", "Kraj", "Telefon ([5-9]********)" };
+        public static string[] zamowienia = { "ID wycieczki", "ID klienta", "Data zamówienia (YYYY-MM-DD)", "Ilość miejsc", "Status", "Data płatności (YYYY-MM-DD)", "Typ płatności" };
+        public static string[] wycieczki = { "ID rezydenta", "Kraj", "Cena za osobe", "Ilość dostępnych miejsc", "Ilość miejsc", "Data wyjazdu (YYYY-MM-DD)", "Data powrotu (YYYY-MM-DD)" };
+        public static string[] hotele = { "Nazwa", "Standard", "Kraj", "Miasto", "Adres", "Telefon ([5-9]********)", "Witryna" };
+        public static string[] rezydenci = { "Imię", "Nazwisko", "Telefon ([5-9]********)", "Adres", "Miasto", "Kraj", "Email (*@domena.com)" };
+        public static string[] uslugi = { "ID wycieczki", "Wyżywienie", "Ubezpieczenie", "Bagaż" };
+        public static string[] atrakcje = { "ID wycieczki", "Rodzaj" };
 
-        public ColumnNames()
-        {
-            
-        }
+        public static string[] id = { "ID" };
+        public static string contentDodaj = "Dodaj";
+        public static string contentUsun = "Usuń";
     }
 }

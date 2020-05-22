@@ -90,7 +90,6 @@
     <Compile Include="sysdiagrams.cs">
       <DependentUpon>TravelAgencyData.tt</DependentUpon>
     </Compile>
-    <Compile Include="Table.cs" />
     <Compile Include="TravelAgencyData.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

@@ -1,0 +1,46 @@
+﻿<Window x:Class="TravelAgency.UpdateRecord"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TravelAgency"
+        mc:Ignorable="d"
+        Title="UpdateRecord" Height="380" Width="400">
+    <StackPanel Height="auto">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="2*"/>
+            </Grid.ColumnDefinitions>
+
+            <StackPanel Grid.Column="0">
+                <Label Content="{Binding [0]}"/>
+                <Label Content="{Binding [1]}"/>
+                <Label Content="{Binding [2]}"/>
+                <Label Content="{Binding [3]}"/>
+                <Label Content="{Binding [4]}"/>
+                <Label Content="{Binding [5]}"/>
+                <Label Content="{Binding [6]}"/>
+                <Label Content="{Binding [7]}"/>
+                <Label Content="{Binding [8]}"/>
+                <Label Content="{Binding [9]}"/>
+                <Label Content="{Binding [10]}"/>
+            </StackPanel>
+
+            <StackPanel Grid.Column="1">
+                <TextBox x:Name="TextBoxImie" Width="200"/>
+                <TextBox x:Name="TextBoxNazwisko" Width="200"/>
+                <TextBox x:Name="TextBoxPesel" Width="200"/>
+                <TextBox x:Name="TextBoxAdres" Width="200"/>
+                <TextBox x:Name="TextBoxMiasto" Width="200"/>
+                <TextBox x:Name="TextBoxKodPocztowy" Width="200"/>
+                <TextBox x:Name="TextBoxKraj" Width="200"/>
+                <TextBox x:Name="TextBoxTelefon" Width="200"/>
+                <TextBox x:Name="TextBoxEmail" Width="200"/>
+                <TextBox x:Name="TextBoxNazwaFirmy" Width="200"/>
+                <TextBox x:Name="TextBoxRegon" Width="200"/>
+            </StackPanel>
+        </Grid>
+        <Button Margin="10" Content="Update record" Click="ButtonUpdateRecord_Click"/>
+    </StackPanel>
+</Window>

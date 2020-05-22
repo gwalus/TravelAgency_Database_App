@@ -1,0 +1,50 @@
+E:\Semestr IV\Bazy Danych II\Projekt\Biuro Podróży\9 -\TravelAgency\TravelAgency\bin\Debug\TravelAgency.exe.config
+E:\Semestr IV\Bazy Danych II\Projekt\Biuro Podróży\9 -\TravelAgency\TravelAgency\bin\Debug\TravelAgency.exe
+E:\Semestr IV\Bazy Danych II\Projekt\Biuro Podróży\9 -\TravelAgency\TravelAgency\bin\Debug\TravelAgency.pdb
+E:\Semestr IV\Bazy Danych II\Projekt\Biuro Podróży\9 -\TravelAgency\TravelAgency\bin\Debug\EntityFramework.dll
+E:\Semestr IV\Bazy Danych II\Projekt\Biuro Podróży\9 -\TravelAgency\TravelAgency\bin\Debug\EntityFramework.SqlServer.dll
+E:\Semestr IV\Bazy Danych II\Projekt\Biuro Podróży\9 -\TravelAgency\TravelAgency\bin\Debug\EntityFramework.xml
+E:\Semestr IV\Bazy Danych II\Projekt\Biuro Podróży\9 -\TravelAgency\TravelAgency\bin\Debug\EntityFramework.SqlServer.xml
+E:\Semestr IV\Bazy Danych II\Projekt\Biuro Podróży\9 -\TravelAgency\TravelAgency\obj\Debug\TravelAgency.csprojAssemblyReference.cache
+E:\Semestr IV\Bazy Danych II\Projekt\Biuro Podróży\9 -\TravelAgency\TravelAgency\obj\Debug\MainWindow.g.cs
+E:\Semestr IV\Bazy Danych II\Projekt\Biuro Podróży\9 -\TravelAgency\TravelAgency\obj\Debug\App.g.cs
+E:\Semestr IV\Bazy Danych II\Projekt\Biuro Podróży\9 -\TravelAgency\TravelAgency\obj\Debug\TravelAgency_Content.g.cs
+E:\Semestr IV\Bazy Danych II\Projekt\Biuro Podróży\9 -\TravelAgency\TravelAgency\obj\Debug\TravelAgency_MarkupCompile.cache
+E:\Semestr IV\Bazy Danych II\Projekt\Biuro Podróży\9 -\TravelAgency\TravelAgency\obj\Debug\TravelAgency_MarkupCompile.lref
+E:\Semestr IV\Bazy Danych II\Projekt\Biuro Podróży\9 -\TravelAgency\TravelAgency\obj\Debug\MainWindow.baml
+E:\Semestr IV\Bazy Danych II\Projekt\Biuro Podróży\9 -\TravelAgency\TravelAgency\obj\Debug\TravelAgency.g.resources
+E:\Semestr IV\Bazy Danych II\Projekt\Biuro Podróży\9 -\TravelAgency\TravelAgency\obj\Debug\TravelAgency.Properties.Resources.resources
+E:\Semestr IV\Bazy Danych II\Projekt\Biuro Podróży\9 -\TravelAgency\TravelAgency\obj\Debug\TravelAgency.csproj.GenerateResource.cache
+E:\Semestr IV\Bazy Danych II\Projekt\Biuro Podróży\9 -\TravelAgency\TravelAgency\obj\Debug\TravelAgency.csproj.CopyComplete
+E:\Semestr IV\Bazy Danych II\Projekt\Biuro Podróży\9 -\TravelAgency\TravelAgency\obj\Debug\TravelAgency.exe
+E:\Semestr IV\Bazy Danych II\Projekt\Biuro Podróży\9 -\TravelAgency\TravelAgency\obj\Debug\TravelAgency.pdb
+D:\Semestr IV\Bazy Danych II\Projekt\Biuro Podróży\9 - Implementacja kodu wspomagającego aplikację użytkową\TravelAgency\TravelAgency\bin\Debug\TravelAgency.exe.config
+D:\Semestr IV\Bazy Danych II\Projekt\Biuro Podróży\9 - Implementacja kodu wspomagającego aplikację użytkową\TravelAgency\TravelAgency\bin\Debug\TravelAgency.exe
+D:\Semestr IV\Bazy Danych II\Projekt\Biuro Podróży\9 - Implementacja kodu wspomagającego aplikację użytkową\TravelAgency\TravelAgency\bin\Debug\TravelAgency.pdb
+D:\Semestr IV\Bazy Danych II\Projekt\Biuro Podróży\9 - Implementacja kodu wspomagającego aplikację użytkową\TravelAgency\TravelAgency\bin\Debug\EntityFramework.dll
+D:\Semestr IV\Bazy Danych II\Projekt\Biuro Podróży\9 - Implementacja kodu wspomagającego aplikację użytkową\TravelAgency\TravelAgency\bin\Debug\EntityFramework.SqlServer.dll
+D:\Semestr IV\Bazy Danych II\Projekt\Biuro Podróży\9 - Implementacja kodu wspomagającego aplikację użytkową\TravelAgency\TravelAgency\bin\Debug\EntityFramework.xml
+D:\Semestr IV\Bazy Danych II\Projekt\Biuro Podróży\9 - Implementacja kodu wspomagającego aplikację użytkową\TravelAgency\TravelAgency\bin\Debug\EntityFramework.SqlServer.xml
+D:\Semestr IV\Bazy Danych II\Projekt\Biuro Podróży\9 - Implementacja kodu wspomagającego aplikację użytkową\TravelAgency\TravelAgency\obj\Debug\TravelAgency.csprojAssemblyReference.cache
+D:\Semestr IV\Bazy Danych II\Projekt\Biuro Podróży\9 - Implementacja kodu wspomagającego aplikację użytkową\TravelAgency\TravelAgency\obj\Debug\MainWindow.g.cs
+D:\Semestr IV\Bazy Danych II\Projekt\Biuro Podróży\9 - Implementacja kodu wspomagającego aplikację użytkową\TravelAgency\TravelAgency\obj\Debug\App.g.cs
+D:\Semestr IV\Bazy Danych II\Projekt\Biuro Podróży\9 - Implementacja kodu wspomagającego aplikację użytkową\TravelAgency\TravelAgency\obj\Debug\TravelAgency_Content.g.cs
+D:\Semestr IV\Bazy Danych II\Projekt\Biuro Podróży\9 - Implementacja kodu wspomagającego aplikację użytkową\TravelAgency\TravelAgency\obj\Debug\TravelAgency_MarkupCompile.cache
+D:\Semestr IV\Bazy Danych II\Projekt\Biuro Podróży\9 - Implementacja kodu wspomagającego aplikację użytkową\TravelAgency\TravelAgency\obj\Debug\TravelAgency_MarkupCompile.lref
+D:\Semestr IV\Bazy Danych II\Projekt\Biuro Podróży\9 - Implementacja kodu wspomagającego aplikację użytkową\TravelAgency\TravelAgency\obj\Debug\MainWindow.baml
+D:\Semestr IV\Bazy Danych II\Projekt\Biuro Podróży\9 - Implementacja kodu wspomagającego aplikację użytkową\TravelAgency\TravelAgency\obj\Debug\TravelAgency.g.resources
+D:\Semestr IV\Bazy Danych II\Projekt\Biuro Podróży\9 - Implementacja kodu wspomagającego aplikację użytkową\TravelAgency\TravelAgency\obj\Debug\TravelAgency.Properties.Resources.resources
+D:\Semestr IV\Bazy Danych II\Projekt\Biuro Podróży\9 - Implementacja kodu wspomagającego aplikację użytkową\TravelAgency\TravelAgency\obj\Debug\TravelAgency.csproj.GenerateResource.cache
+D:\Semestr IV\Bazy Danych II\Projekt\Biuro Podróży\9 - Implementacja kodu wspomagającego aplikację użytkową\TravelAgency\TravelAgency\obj\Debug\TravelAgency.csproj.CoreCompileInputs.cache
+D:\Semestr IV\Bazy Danych II\Projekt\Biuro Podróży\9 - Implementacja kodu wspomagającego aplikację użytkową\TravelAgency\TravelAgency\obj\Debug\TravelAgency.csproj.CopyComplete
+D:\Semestr IV\Bazy Danych II\Projekt\Biuro Podróży\9 - Implementacja kodu wspomagającego aplikację użytkową\TravelAgency\TravelAgency\obj\Debug\TravelAgency.exe
+D:\Semestr IV\Bazy Danych II\Projekt\Biuro Podróży\9 - Implementacja kodu wspomagającego aplikację użytkową\TravelAgency\TravelAgency\obj\Debug\TravelAgency.pdb
+D:\Semestr IV\Bazy Danych II\Projekt\Biuro Podróży\9 - Implementacja kodu wspomagającego aplikację użytkową\TravelAgency\TravelAgency\bin\Debug\MaterialDesignColors.dll
+D:\Semestr IV\Bazy Danych II\Projekt\Biuro Podróży\9 - Implementacja kodu wspomagającego aplikację użytkową\TravelAgency\TravelAgency\bin\Debug\MaterialDesignThemes.Wpf.dll
+D:\Semestr IV\Bazy Danych II\Projekt\Biuro Podróży\9 - Implementacja kodu wspomagającego aplikację użytkową\TravelAgency\TravelAgency\bin\Debug\MaterialDesignColors.pdb
+D:\Semestr IV\Bazy Danych II\Projekt\Biuro Podróży\9 - Implementacja kodu wspomagającego aplikację użytkową\TravelAgency\TravelAgency\bin\Debug\MaterialDesignThemes.Wpf.pdb
+D:\Semestr IV\Bazy Danych II\Projekt\Biuro Podróży\9 - Implementacja kodu wspomagającego aplikację użytkową\TravelAgency\TravelAgency\bin\Debug\MaterialDesignThemes.Wpf.xml
+D:\Semestr IV\Bazy Danych II\Projekt\Biuro Podróży\9 - Implementacja kodu wspomagającego aplikację użytkową\TravelAgency\TravelAgency\obj\Debug\App.baml
+D:\Semestr IV\Bazy Danych II\Projekt\Biuro Podróży\9 - Implementacja kodu wspomagającego aplikację użytkową\TravelAgency\TravelAgency\obj\Debug\UpdateRecord.g.cs
+D:\Semestr IV\Bazy Danych II\Projekt\Biuro Podróży\9 - Implementacja kodu wspomagającego aplikację użytkową\TravelAgency\TravelAgency\obj\Debug\UpdateRecord.baml
+D:\Semestr IV\Bazy Danych II\Projekt\Biuro Podróży\9 - Implementacja kodu wspomagającego aplikację użytkową\TravelAgency\TravelAgency\obj\Debug\GeneratedInternalTypeHelper.g.cs

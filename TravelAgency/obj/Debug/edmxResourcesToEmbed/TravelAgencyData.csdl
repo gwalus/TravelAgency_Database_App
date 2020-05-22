@@ -1,0 +1,256 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="BiuroPodrozyModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Atrakcje">
+    <Key>
+      <PropertyRef Name="Id_atrakcji" />
+    </Key>
+    <Property Name="Id_atrakcji" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Id_wycieczki" Type="Int32" />
+    <Property Name="Rodzaj" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Wycieczki" Relationship="Self.FK_Wycieczki_Atrakcje" FromRole="Atrakcje" ToRole="Wycieczki" />
+  </EntityType>
+  <EntityType Name="Hotele">
+    <Key>
+      <PropertyRef Name="Id_hotelu" />
+    </Key>
+    <Property Name="Id_hotelu" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nazwa" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Standard" Type="Int32" />
+    <Property Name="Kraj" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="Miasto" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="Adres" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="Telefon" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Witryna" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Wycieczki" Relationship="Self.Wycieczki_Hotele" FromRole="Hotele" ToRole="Wycieczki" />
+  </EntityType>
+  <EntityType Name="Klienci">
+    <Key>
+      <PropertyRef Name="Id_klienta" />
+    </Key>
+    <Property Name="Id_klienta" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Imię" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="Nazwisko" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="Pesel" Type="String" MaxLength="12" FixedLength="false" Unicode="true" />
+    <Property Name="Adres" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="Miasto" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="Kod_pocztowy" Type="String" MaxLength="6" FixedLength="false" Unicode="true" />
+    <Property Name="Kraj" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="Telefon" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Nazwa_firmy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Regon" Type="String" MaxLength="14" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Uczestnicy" Relationship="Self.FK__Uczestnic__Id_kl__3A81B327" FromRole="Klienci" ToRole="Uczestnicy" />
+    <NavigationProperty Name="Zamówienia" Relationship="Self.FK__Zamówieni__Id_Kl__412EB0B6" FromRole="Klienci" ToRole="Zamówienia" />
+  </EntityType>
+  <EntityType Name="Rezydenci">
+    <Key>
+      <PropertyRef Name="Id_rezydenta" />
+    </Key>
+    <Property Name="Id_rezydenta" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Imię" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="Nazwisko" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="Telefon" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Adres" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="Miasto" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="Kraj" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Wycieczki" Relationship="Self.FK_Wycieczki_Rezydenci" FromRole="Rezydenci" ToRole="Wycieczki" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Uczestnicy">
+    <Key>
+      <PropertyRef Name="Id_uczestnika" />
+    </Key>
+    <Property Name="Id_uczestnika" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Id_klienta" Type="Int32" />
+    <Property Name="Imię" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="Nazwisko" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="Pesel" Type="String" MaxLength="11" FixedLength="false" Unicode="true" />
+    <Property Name="DataUrodzenia" Type="DateTime" Precision="0" />
+    <Property Name="MiejsceUrodzenia" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="Adres" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="Miasto" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="Kod_pocztowy" Type="String" MaxLength="6" FixedLength="false" Unicode="true" />
+    <Property Name="Kraj" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="Telefon" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Klienci" Relationship="Self.FK__Uczestnic__Id_kl__3A81B327" FromRole="Uczestnicy" ToRole="Klienci" />
+    <NavigationProperty Name="Zamówienia" Relationship="Self.Zamówienia_Uczestnicy" FromRole="Uczestnicy" ToRole="Zamówienia" />
+  </EntityType>
+  <EntityType Name="Usługi">
+    <Key>
+      <PropertyRef Name="Id_usługi" />
+    </Key>
+    <Property Name="Id_usługi" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Id_wycieczki" Type="Int32" />
+    <Property Name="Wyżywienie" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="Ubezpieczenie" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="Bagaż" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Wycieczki" Relationship="Self.FK_Wycieczki_Usługi" FromRole="Usługi" ToRole="Wycieczki" />
+  </EntityType>
+  <EntityType Name="Wycieczki">
+    <Key>
+      <PropertyRef Name="Id_wycieczki" />
+    </Key>
+    <Property Name="Id_wycieczki" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Id_rezydenta" Type="Int32" />
+    <Property Name="Kraj" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="Cena_za_osobe" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="Ilość_dostępnych_miejsc" Type="Int32" />
+    <Property Name="Ilość_miejsc" Type="Int32" />
+    <Property Name="Data_wyjazdu" Type="DateTime" Precision="0" />
+    <Property Name="Data_powrotu" Type="DateTime" Precision="0" />
+    <NavigationProperty Name="Atrakcje" Relationship="Self.FK_Wycieczki_Atrakcje" FromRole="Wycieczki" ToRole="Atrakcje" />
+    <NavigationProperty Name="Rezydenci" Relationship="Self.FK_Wycieczki_Rezydenci" FromRole="Wycieczki" ToRole="Rezydenci" />
+    <NavigationProperty Name="Usługi" Relationship="Self.FK_Wycieczki_Usługi" FromRole="Wycieczki" ToRole="Usługi" />
+    <NavigationProperty Name="Zamówienia" Relationship="Self.FK_Zamówienia_Wycieczki" FromRole="Wycieczki" ToRole="Zamówienia" />
+    <NavigationProperty Name="Hotele" Relationship="Self.Wycieczki_Hotele" FromRole="Wycieczki" ToRole="Hotele" />
+  </EntityType>
+  <EntityType Name="Zamówienia">
+    <Key>
+      <PropertyRef Name="Id_zamówienia" />
+    </Key>
+    <Property Name="Id_zamówienia" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Id_wycieczki" Type="Int32" />
+    <Property Name="Id_Klienta" Type="Int32" />
+    <Property Name="Data_zamówienia" Type="DateTime" Precision="0" />
+    <Property Name="Ilość_miejsc" Type="Int32" />
+    <Property Name="Status" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="Data_płatności" Type="DateTime" Precision="0" />
+    <Property Name="Typ_płatności" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Klienci" Relationship="Self.FK__Zamówieni__Id_Kl__412EB0B6" FromRole="Zamówienia" ToRole="Klienci" />
+    <NavigationProperty Name="Wycieczki" Relationship="Self.FK_Zamówienia_Wycieczki" FromRole="Zamówienia" ToRole="Wycieczki" />
+    <NavigationProperty Name="Uczestnicy" Relationship="Self.Zamówienia_Uczestnicy" FromRole="Zamówienia" ToRole="Uczestnicy" />
+  </EntityType>
+  <Association Name="FK_Wycieczki_Atrakcje">
+    <End Role="Wycieczki" Type="Self.Wycieczki" Multiplicity="0..1" />
+    <End Role="Atrakcje" Type="Self.Atrakcje" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Wycieczki">
+        <PropertyRef Name="Id_wycieczki" />
+      </Principal>
+      <Dependent Role="Atrakcje">
+        <PropertyRef Name="Id_wycieczki" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Uczestnic__Id_kl__3A81B327">
+    <End Role="Klienci" Type="Self.Klienci" Multiplicity="0..1" />
+    <End Role="Uczestnicy" Type="Self.Uczestnicy" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Klienci">
+        <PropertyRef Name="Id_klienta" />
+      </Principal>
+      <Dependent Role="Uczestnicy">
+        <PropertyRef Name="Id_klienta" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Zamówieni__Id_Kl__412EB0B6">
+    <End Role="Klienci" Type="Self.Klienci" Multiplicity="0..1" />
+    <End Role="Zamówienia" Type="Self.Zamówienia" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Klienci">
+        <PropertyRef Name="Id_klienta" />
+      </Principal>
+      <Dependent Role="Zamówienia">
+        <PropertyRef Name="Id_Klienta" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Wycieczki_Rezydenci">
+    <End Role="Rezydenci" Type="Self.Rezydenci" Multiplicity="0..1" />
+    <End Role="Wycieczki" Type="Self.Wycieczki" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Rezydenci">
+        <PropertyRef Name="Id_rezydenta" />
+      </Principal>
+      <Dependent Role="Wycieczki">
+        <PropertyRef Name="Id_rezydenta" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Wycieczki_Usługi">
+    <End Role="Wycieczki" Type="Self.Wycieczki" Multiplicity="0..1" />
+    <End Role="Usługi" Type="Self.Usługi" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Wycieczki">
+        <PropertyRef Name="Id_wycieczki" />
+      </Principal>
+      <Dependent Role="Usługi">
+        <PropertyRef Name="Id_wycieczki" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Zamówienia_Wycieczki">
+    <End Role="Wycieczki" Type="Self.Wycieczki" Multiplicity="0..1" />
+    <End Role="Zamówienia" Type="Self.Zamówienia" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Wycieczki">
+        <PropertyRef Name="Id_wycieczki" />
+      </Principal>
+      <Dependent Role="Zamówienia">
+        <PropertyRef Name="Id_wycieczki" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Wycieczki_Hotele">
+    <End Role="Hotele" Type="Self.Hotele" Multiplicity="*" />
+    <End Role="Wycieczki" Type="Self.Wycieczki" Multiplicity="*" />
+  </Association>
+  <Association Name="Zamówienia_Uczestnicy">
+    <End Role="Uczestnicy" Type="Self.Uczestnicy" Multiplicity="*" />
+    <End Role="Zamówienia" Type="Self.Zamówienia" Multiplicity="*" />
+  </Association>
+  <EntityContainer Name="BiuroPodrozyEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Atrakcje" EntityType="Self.Atrakcje" />
+    <EntitySet Name="Hotele" EntityType="Self.Hotele" />
+    <EntitySet Name="Klienci" EntityType="Self.Klienci" />
+    <EntitySet Name="Rezydenci" EntityType="Self.Rezydenci" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+    <EntitySet Name="Uczestnicy" EntityType="Self.Uczestnicy" />
+    <EntitySet Name="Usługi" EntityType="Self.Usługi" />
+    <EntitySet Name="Wycieczki" EntityType="Self.Wycieczki" />
+    <EntitySet Name="Zamówienia" EntityType="Self.Zamówienia" />
+    <AssociationSet Name="FK_Wycieczki_Atrakcje" Association="Self.FK_Wycieczki_Atrakcje">
+      <End Role="Wycieczki" EntitySet="Wycieczki" />
+      <End Role="Atrakcje" EntitySet="Atrakcje" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Uczestnic__Id_kl__3A81B327" Association="Self.FK__Uczestnic__Id_kl__3A81B327">
+      <End Role="Klienci" EntitySet="Klienci" />
+      <End Role="Uczestnicy" EntitySet="Uczestnicy" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Zamówieni__Id_Kl__412EB0B6" Association="Self.FK__Zamówieni__Id_Kl__412EB0B6">
+      <End Role="Klienci" EntitySet="Klienci" />
+      <End Role="Zamówienia" EntitySet="Zamówienia" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Wycieczki_Rezydenci" Association="Self.FK_Wycieczki_Rezydenci">
+      <End Role="Rezydenci" EntitySet="Rezydenci" />
+      <End Role="Wycieczki" EntitySet="Wycieczki" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Wycieczki_Usługi" Association="Self.FK_Wycieczki_Usługi">
+      <End Role="Wycieczki" EntitySet="Wycieczki" />
+      <End Role="Usługi" EntitySet="Usługi" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Zamówienia_Wycieczki" Association="Self.FK_Zamówienia_Wycieczki">
+      <End Role="Wycieczki" EntitySet="Wycieczki" />
+      <End Role="Zamówienia" EntitySet="Zamówienia" />
+    </AssociationSet>
+    <AssociationSet Name="Wycieczki_Hotele" Association="Self.Wycieczki_Hotele">
+      <End Role="Hotele" EntitySet="Hotele" />
+      <End Role="Wycieczki" EntitySet="Wycieczki" />
+    </AssociationSet>
+    <AssociationSet Name="Zamówienia_Uczestnicy" Association="Self.Zamówienia_Uczestnicy">
+      <End Role="Uczestnicy" EntitySet="Uczestnicy" />
+      <End Role="Zamówienia" EntitySet="Zamówienia" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

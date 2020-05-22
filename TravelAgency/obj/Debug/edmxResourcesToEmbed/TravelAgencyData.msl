@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="BiuroPodrozyModelStoreContainer" CdmEntityContainer="BiuroPodrozyEntities">
+    <EntitySetMapping Name="Atrakcje">
+      <EntityTypeMapping TypeName="BiuroPodrozyModel.Atrakcje">
+        <MappingFragment StoreEntitySet="Atrakcje">
+          <ScalarProperty Name="Id_atrakcji" ColumnName="Id_atrakcji" />
+          <ScalarProperty Name="Id_wycieczki" ColumnName="Id_wycieczki" />
+          <ScalarProperty Name="Rodzaj" ColumnName="Rodzaj" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Hotele">
+      <EntityTypeMapping TypeName="BiuroPodrozyModel.Hotele">
+        <MappingFragment StoreEntitySet="Hotele">
+          <ScalarProperty Name="Id_hotelu" ColumnName="Id_hotelu" />
+          <ScalarProperty Name="Nazwa" ColumnName="Nazwa" />
+          <ScalarProperty Name="Standard" ColumnName="Standard" />
+          <ScalarProperty Name="Kraj" ColumnName="Kraj" />
+          <ScalarProperty Name="Miasto" ColumnName="Miasto" />
+          <ScalarProperty Name="Adres" ColumnName="Adres" />
+          <ScalarProperty Name="Telefon" ColumnName="Telefon" />
+          <ScalarProperty Name="Witryna" ColumnName="Witryna" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Klienci">
+      <EntityTypeMapping TypeName="BiuroPodrozyModel.Klienci">
+        <MappingFragment StoreEntitySet="Klienci">
+          <ScalarProperty Name="Id_klienta" ColumnName="Id_klienta" />
+          <ScalarProperty Name="Imię" ColumnName="Imię" />
+          <ScalarProperty Name="Nazwisko" ColumnName="Nazwisko" />
+          <ScalarProperty Name="Pesel" ColumnName="Pesel" />
+          <ScalarProperty Name="Adres" ColumnName="Adres" />
+          <ScalarProperty Name="Miasto" ColumnName="Miasto" />
+          <ScalarProperty Name="Kod_pocztowy" ColumnName="Kod_pocztowy" />
+          <ScalarProperty Name="Kraj" ColumnName="Kraj" />
+          <ScalarProperty Name="Telefon" ColumnName="Telefon" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Nazwa_firmy" ColumnName="Nazwa_firmy" />
+          <ScalarProperty Name="Regon" ColumnName="Regon" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Rezydenci">
+      <EntityTypeMapping TypeName="BiuroPodrozyModel.Rezydenci">
+        <MappingFragment StoreEntitySet="Rezydenci">
+          <ScalarProperty Name="Id_rezydenta" ColumnName="Id_rezydenta" />
+          <ScalarProperty Name="Imię" ColumnName="Imię" />
+          <ScalarProperty Name="Nazwisko" ColumnName="Nazwisko" />
+          <ScalarProperty Name="Telefon" ColumnName="Telefon" />
+          <ScalarProperty Name="Adres" ColumnName="Adres" />
+          <ScalarProperty Name="Miasto" ColumnName="Miasto" />
+          <ScalarProperty Name="Kraj" ColumnName="Kraj" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="BiuroPodrozyModel.sysdiagrams">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Uczestnicy">
+      <EntityTypeMapping TypeName="BiuroPodrozyModel.Uczestnicy">
+        <MappingFragment StoreEntitySet="Uczestnicy">
+          <ScalarProperty Name="Id_uczestnika" ColumnName="Id_uczestnika" />
+          <ScalarProperty Name="Id_klienta" ColumnName="Id_klienta" />
+          <ScalarProperty Name="Imię" ColumnName="Imię" />
+          <ScalarProperty Name="Nazwisko" ColumnName="Nazwisko" />
+          <ScalarProperty Name="Pesel" ColumnName="Pesel" />
+          <ScalarProperty Name="DataUrodzenia" ColumnName="DataUrodzenia" />
+          <ScalarProperty Name="MiejsceUrodzenia" ColumnName="MiejsceUrodzenia" />
+          <ScalarProperty Name="Adres" ColumnName="Adres" />
+          <ScalarProperty Name="Miasto" ColumnName="Miasto" />
+          <ScalarProperty Name="Kod_pocztowy" ColumnName="Kod_pocztowy" />
+          <ScalarProperty Name="Kraj" ColumnName="Kraj" />
+          <ScalarProperty Name="Telefon" ColumnName="Telefon" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Usługi">
+      <EntityTypeMapping TypeName="BiuroPodrozyModel.Usługi">
+        <MappingFragment StoreEntitySet="Usługi">
+          <ScalarProperty Name="Id_usługi" ColumnName="Id_usługi" />
+          <ScalarProperty Name="Id_wycieczki" ColumnName="Id_wycieczki" />
+          <ScalarProperty Name="Wyżywienie" ColumnName="Wyżywienie" />
+          <ScalarProperty Name="Ubezpieczenie" ColumnName="Ubezpieczenie" />
+          <ScalarProperty Name="Bagaż" ColumnName="Bagaż" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Wycieczki">
+      <EntityTypeMapping TypeName="BiuroPodrozyModel.Wycieczki">
+        <MappingFragment StoreEntitySet="Wycieczki">
+          <ScalarProperty Name="Id_wycieczki" ColumnName="Id_wycieczki" />
+          <ScalarProperty Name="Id_rezydenta" ColumnName="Id_rezydenta" />
+          <ScalarProperty Name="Kraj" ColumnName="Kraj" />
+          <ScalarProperty Name="Cena_za_osobe" ColumnName="Cena_za_osobe" />
+          <ScalarProperty Name="Ilość_dostępnych_miejsc" ColumnName="Ilość_dostępnych_miejsc" />
+          <ScalarProperty Name="Ilość_miejsc" ColumnName="Ilość_miejsc" />
+          <ScalarProperty Name="Data_wyjazdu" ColumnName="Data_wyjazdu" />
+          <ScalarProperty Name="Data_powrotu" ColumnName="Data_powrotu" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Zamówienia">
+      <EntityTypeMapping TypeName="BiuroPodrozyModel.Zamówienia">
+        <MappingFragment StoreEntitySet="Zamówienia">
+          <ScalarProperty Name="Id_zamówienia" ColumnName="Id_zamówienia" />
+          <ScalarProperty Name="Id_wycieczki" ColumnName="Id_wycieczki" />
+          <ScalarProperty Name="Id_Klienta" ColumnName="Id_Klienta" />
+          <ScalarProperty Name="Data_zamówienia" ColumnName="Data_zamówienia" />
+          <ScalarProperty Name="Ilość_miejsc" ColumnName="Ilość_miejsc" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Data_płatności" ColumnName="Data_płatności" />
+          <ScalarProperty Name="Typ_płatności" ColumnName="Typ_płatności" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="Wycieczki_Hotele" TypeName="BiuroPodrozyModel.Wycieczki_Hotele" StoreEntitySet="Wycieczki_Hotele">
+      <EndProperty Name="Hotele">
+        <ScalarProperty Name="Id_hotelu" ColumnName="Id_hotelu" />
+      </EndProperty>
+      <EndProperty Name="Wycieczki">
+        <ScalarProperty Name="Id_wycieczki" ColumnName="Id_wycieczki" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="Zamówienia_Uczestnicy" TypeName="BiuroPodrozyModel.Zamówienia_Uczestnicy" StoreEntitySet="Zamówienia_Uczestnicy">
+      <EndProperty Name="Uczestnicy">
+        <ScalarProperty Name="Id_uczestnika" ColumnName="Id_uczestnika" />
+      </EndProperty>
+      <EndProperty Name="Zamówienia">
+        <ScalarProperty Name="Id_zamówienia" ColumnName="Id_zamówienia" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping>

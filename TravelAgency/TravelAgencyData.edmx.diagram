@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="4c49b173f41b4ed986dec51825774e7e" Name="Diagram1">
+        <EntityTypeShape EntityType="BiuroPodrozyModel.Atrakcje" Width="1.5" PointX="5.25" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="BiuroPodrozyModel.Hotele" Width="1.5" PointX="0.75" PointY="6.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="BiuroPodrozyModel.Klienci" Width="1.5" PointX="6" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BiuroPodrozyModel.Rezydenci" Width="1.5" PointX="0.75" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="BiuroPodrozyModel.sysdiagrams" Width="1.5" PointX="8.75" PointY="3" IsExpanded="true" />
+        <EntityTypeShape EntityType="BiuroPodrozyModel.Uczestnicy" Width="1.5" PointX="6" PointY="11.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BiuroPodrozyModel.Usługi" Width="1.5" PointX="5.25" PointY="8" IsExpanded="true" />
+        <EntityTypeShape EntityType="BiuroPodrozyModel.Wycieczki" Width="1.5" PointX="3" PointY="6.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="BiuroPodrozyModel.Zamówienia" Width="1.5" PointX="8.25" PointY="6.25" IsExpanded="true" />
+        <AssociationConnector Association="BiuroPodrozyModel.FK_Wycieczki_Atrakcje" ManuallyRouted="false" />
+        <AssociationConnector Association="BiuroPodrozyModel.FK__Uczestnic__Id_kl__3A81B327" ManuallyRouted="false" />
+        <AssociationConnector Association="BiuroPodrozyModel.FK__Zamówieni__Id_Kl__412EB0B6" ManuallyRouted="false" />
+        <AssociationConnector Association="BiuroPodrozyModel.FK_Wycieczki_Rezydenci" ManuallyRouted="false" />
+        <AssociationConnector Association="BiuroPodrozyModel.FK_Wycieczki_Usługi" ManuallyRouted="false" />
+        <AssociationConnector Association="BiuroPodrozyModel.FK_Zamówienia_Wycieczki" ManuallyRouted="false" />
+        <AssociationConnector Association="BiuroPodrozyModel.Wycieczki_Hotele" ManuallyRouted="false" />
+        <AssociationConnector Association="BiuroPodrozyModel.Zamówienia_Uczestnicy" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

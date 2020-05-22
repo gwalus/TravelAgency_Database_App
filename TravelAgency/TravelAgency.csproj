@@ -78,6 +78,7 @@
     <Compile Include="ColumnNames.cs" />
     <Compile Include="Converters\BooleanToForegroundConverter.cs" />
     <Compile Include="Converters\StringToVisibilityConverter.cs" />
+    <Compile Include="Functions.cs" />
     <Compile Include="Hotele.cs">
       <DependentUpon>TravelAgencyData.tt</DependentUpon>
     </Compile>

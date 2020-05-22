@@ -20,5 +20,6 @@ namespace TravelAgency
         public static string[] id = { "ID" };
         public static string contentDodaj = "Dodaj";
         public static string contentUsun = "Usuń";
+        public static string contentAktualizuj = "Zaktualizuj";
     }
 }

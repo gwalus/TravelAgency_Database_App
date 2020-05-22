@@ -14,7 +14,7 @@
         TextOptions.TextRenderingMode="Auto"
         Background="{DynamicResource MaterialDesignPaper}"
         FontFamily="{DynamicResource MaterialDesignFont}"
-        Title="TravelAgency" Height="650" Width="900">
+        Title="TravelAgency" Height="650" Width="1080">
     <Window.Resources>
         <Style TargetType="TextBox" x:Key="TextBoxAddRecord">
             <Setter Property="Width" Value="auto"/>
@@ -38,31 +38,30 @@
         <Border Grid.Column="0" Grid.RowSpan="2" Margin="5" BorderBrush="Black" BorderThickness="1" Width="200" Visibility="{Binding ElementName=ToggleButtonDodajRekord, Path=IsChecked, Converter={StaticResource BooleanToVisibilityConverter}}">
             <StackPanel>
                 <Label x:Name="Label0" Content="{Binding TableName[0]}" Visibility="{Binding RelativeSource={RelativeSource Self},Path=Content, Converter={StaticResource StringToVisibilityConverter}}"/>
-                <TextBox x:Name="TextBoxImie" Style="{StaticResource TextBoxAddRecord}" Visibility="{Binding ElementName=Label0, Path=Content, Converter={StaticResource StringToVisibilityConverter}}"/>
+                <TextBox x:Name="TextBox1" Style="{StaticResource TextBoxAddRecord}" Visibility="{Binding ElementName=Label0, Path=Content, Converter={StaticResource StringToVisibilityConverter}}"/>
                 <Label x:Name="Label1" Content="{Binding TableName[1]}" Visibility="{Binding RelativeSource={RelativeSource Self},Path=Content, Converter={StaticResource StringToVisibilityConverter}}"/>
-                <TextBox x:Name="TextBoxNazwisko" Style="{StaticResource TextBoxAddRecord}" Visibility="{Binding ElementName=Label1, Path=Content, Converter={StaticResource StringToVisibilityConverter}}"/>
+                <TextBox x:Name="TextBox2" Style="{StaticResource TextBoxAddRecord}" Visibility="{Binding ElementName=Label1, Path=Content, Converter={StaticResource StringToVisibilityConverter}}"/>
                 <Label x:Name="Label2" Content="{Binding TableName[2]}" Visibility="{Binding RelativeSource={RelativeSource Self},Path=Content, Converter={StaticResource StringToVisibilityConverter}}"/>
-                <TextBox x:Name="TextBoxPesel" Style="{StaticResource TextBoxAddRecord}" Visibility="{Binding ElementName=Label2, Path=Content, Converter={StaticResource StringToVisibilityConverter}}"/>
+                <TextBox x:Name="TextBox3" Style="{StaticResource TextBoxAddRecord}" Visibility="{Binding ElementName=Label2, Path=Content, Converter={StaticResource StringToVisibilityConverter}}"/>
                 <Label x:Name="Label3" Content="{Binding TableName[3]}" Visibility="{Binding RelativeSource={RelativeSource Self},Path=Content, Converter={StaticResource StringToVisibilityConverter}}"/>
-                <TextBox x:Name="TextBoxAdres" Style="{StaticResource TextBoxAddRecord}" Visibility="{Binding ElementName=Label3, Path=Content, Converter={StaticResource StringToVisibilityConverter}}"/>
+                <TextBox x:Name="TextBox4" Style="{StaticResource TextBoxAddRecord}" Visibility="{Binding ElementName=Label3, Path=Content, Converter={StaticResource StringToVisibilityConverter}}"/>
                 <Label x:Name="Label4" Content="{Binding TableName[4]}" Visibility="{Binding RelativeSource={RelativeSource Self},Path=Content, Converter={StaticResource StringToVisibilityConverter}}"/>
-                <TextBox x:Name="TextBoxMiasto" Style="{StaticResource TextBoxAddRecord}" Visibility="{Binding ElementName=Label4, Path=Content, Converter={StaticResource StringToVisibilityConverter}}"/>
+                <TextBox x:Name="TextBox5" Style="{StaticResource TextBoxAddRecord}" Visibility="{Binding ElementName=Label4, Path=Content, Converter={StaticResource StringToVisibilityConverter}}"/>
                 <Label x:Name="Label5" Content="{Binding TableName[5]}" Visibility="{Binding RelativeSource={RelativeSource Self},Path=Content, Converter={StaticResource StringToVisibilityConverter}}"/>
-                <TextBox x:Name="TextBoxKodPocztowy" Style="{StaticResource TextBoxAddRecord}" Visibility="{Binding ElementName=Label5, Path=Content, Converter={StaticResource StringToVisibilityConverter}}"/>
+                <TextBox x:Name="TextBox6" Style="{StaticResource TextBoxAddRecord}" Visibility="{Binding ElementName=Label5, Path=Content, Converter={StaticResource StringToVisibilityConverter}}"/>
                 <Label x:Name="Label6" Content="{Binding TableName[6]}" Visibility="{Binding RelativeSource={RelativeSource Self},Path=Content, Converter={StaticResource StringToVisibilityConverter}}"/>
-                <TextBox x:Name="TextBoxKraj" Style="{StaticResource TextBoxAddRecord}" Visibility="{Binding ElementName=Label6, Path=Content, Converter={StaticResource StringToVisibilityConverter}}"/>
+                <TextBox x:Name="TextBox7" Style="{StaticResource TextBoxAddRecord}" Visibility="{Binding ElementName=Label6, Path=Content, Converter={StaticResource StringToVisibilityConverter}}"/>
                 <Label x:Name="Label7" Content="{Binding TableName[7]}" Visibility="{Binding RelativeSource={RelativeSource Self},Path=Content, Converter={StaticResource StringToVisibilityConverter}}"/>
-                <TextBox x:Name="TextBoxTelefon" Style="{StaticResource TextBoxAddRecord}" Visibility="{Binding ElementName=Label7, Path=Content, Converter={StaticResource StringToVisibilityConverter}}"/>
+                <TextBox x:Name="TextBox8" Style="{StaticResource TextBoxAddRecord}" Visibility="{Binding ElementName=Label7, Path=Content, Converter={StaticResource StringToVisibilityConverter}}"/>
                 <Label x:Name="Label8" Content="{Binding TableName[8]}" Visibility="{Binding RelativeSource={RelativeSource Self},Path=Content, Converter={StaticResource StringToVisibilityConverter}}"/>
-                <TextBox x:Name="TextBoxEmail" Style="{StaticResource TextBoxAddRecord}" Visibility="{Binding ElementName=Label8, Path=Content, Converter={StaticResource StringToVisibilityConverter}}"/>
+                <TextBox x:Name="TextBox9" Style="{StaticResource TextBoxAddRecord}" Visibility="{Binding ElementName=Label8, Path=Content, Converter={StaticResource StringToVisibilityConverter}}"/>
                 <Label x:Name="Label9" Content="{Binding TableName[9]}" Visibility="{Binding RelativeSource={RelativeSource Self},Path=Content, Converter={StaticResource StringToVisibilityConverter}}"/>
-                <TextBox x:Name="TextBoxNazwaFirmy" Style="{StaticResource TextBoxAddRecord}" Visibility="{Binding ElementName=Label9, Path=Content, Converter={StaticResource StringToVisibilityConverter}}"/>
+                <TextBox x:Name="TextBox10" Style="{StaticResource TextBoxAddRecord}" Visibility="{Binding ElementName=Label9, Path=Content, Converter={StaticResource StringToVisibilityConverter}}"/>
                 <Label Name="Label10" Content="{Binding TableName[10]}" Visibility="{Binding RelativeSource={RelativeSource Self},Path=Content, Converter={StaticResource StringToVisibilityConverter}}"/>
-                <TextBox x:Name="TextBoxRegon" Style="{StaticResource TextBoxAddRecord}" Visibility="{Binding ElementName=Label10, Path=Content, Converter={StaticResource StringToVisibilityConverter}}"/>
+                <TextBox x:Name="TextBox11" Style="{StaticResource TextBoxAddRecord}" Visibility="{Binding ElementName=Label10, Path=Content, Converter={StaticResource StringToVisibilityConverter}}"/>
                 <Button Content="{Binding ButtonContent}" Margin="5 10 5 0" Click="ButtonAddNewRecord_Click"/>
             </StackPanel>
         </Border>
-
 
         <StackPanel Orientation="Horizontal" Grid.Row="0" Grid.Column="1">
             <ComboBox Margin="5" x:Name="comboBox" IsTextSearchEnabled="True" IsEditable="True" Text="Wybierz tabele" SelectionChanged="ComboBox_Selected">
@@ -80,10 +79,12 @@
                           Content="Dodaj rekord" Click="RadioButtonAddNewRekord_Click"/>
             <RadioButton x:Name="RadioButtonUsun" Style="{StaticResource MaterialDesignOutlinedButton}" Margin="5" Background="{Binding RelativeSource={RelativeSource Self}, Path=IsChecked, Converter={StaticResource BooleanToForegroundConverter}}"
                           Content="Usuń rekord" Click="RadioButtonDeleteRecord_Click"/>
+            <RadioButton x:Name="RadioButtonAktualizuj" Style="{StaticResource MaterialDesignOutlinedButton}" Margin="5" Background="{Binding RelativeSource={RelativeSource Self}, Path=IsChecked, Converter={StaticResource BooleanToForegroundConverter}}"
+                          Content="Aktualizuj rekord" Click="RadioButtonUpdate_Click"/>
+            <TextBlock Style="{StaticResource MaterialDesignSubtitle1TextBlock}" TextAlignment="Center" VerticalAlignment="Center" FontSize="20" Text="ID rekordu do aktualizaji:" Width="auto" Margin="5"/>
+            <TextBox x:Name="TextBoxIdToUpdate" Width="80" Margin="5" TextAlignment="Center" HorizontalContentAlignment="Left" VerticalContentAlignment="Center"/>
         </StackPanel>
 
-        <DataGrid x:Name="databaseList" ItemsSource="{Binding TableContent}" Grid.Row="1" Grid.Column="1">
-
-        </DataGrid>
+        <DataGrid x:Name="databaseList" ItemsSource="{Binding TableContent}" Grid.Row="1" Grid.Column="1"/>
     </Grid>
 </Window>

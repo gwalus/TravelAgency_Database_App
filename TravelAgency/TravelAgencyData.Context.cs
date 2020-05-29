@@ -12,6 +12,8 @@ namespace TravelAgency
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
+    using System.Data.Entity.Core.Objects;
+    using System.Linq;
     
     public partial class BiuroPodrozyEntities : DbContext
     {
@@ -34,5 +36,48 @@ namespace TravelAgency
         public virtual DbSet<Usługi> Usługi { get; set; }
         public virtual DbSet<Wycieczki> Wycieczki { get; set; }
         public virtual DbSet<Zamówienia> Zamówienia { get; set; }
+        public virtual DbSet<vRezydenciPodrozy> vRezydenciPodrozy { get; set; }
+        public virtual DbSet<vTrwajaceWycieczki> vTrwajaceWycieczki { get; set; }
+        public virtual DbSet<vIlośćWycieczek> vIlośćWycieczek { get; set; }
+    
+        [DbFunction("BiuroPodrozyEntities", "WycieczkiPoRodzajuAtrakcji")]
+        public virtual IQueryable<WycieczkiPoRodzajuAtrakcji_Result> WycieczkiPoRodzajuAtrakcji(string atrakcja)
+        {
+            var atrakcjaParameter = atrakcja != null ?
+                new ObjectParameter("atrakcja", atrakcja) :
+                new ObjectParameter("atrakcja", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.CreateQuery<WycieczkiPoRodzajuAtrakcji_Result>("[BiuroPodrozyEntities].[WycieczkiPoRodzajuAtrakcji](@atrakcja)", atrakcjaParameter);
+        }
+    
+        [DbFunction("BiuroPodrozyEntities", "UczestnicyWycieczki")]
+        public virtual IQueryable<UczestnicyWycieczki_Result> UczestnicyWycieczki(Nullable<int> idZamowienia)
+        {
+            var idZamowieniaParameter = idZamowienia.HasValue ?
+                new ObjectParameter("idZamowienia", idZamowienia) :
+                new ObjectParameter("idZamowienia", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.CreateQuery<UczestnicyWycieczki_Result>("[BiuroPodrozyEntities].[UczestnicyWycieczki](@idZamowienia)", idZamowieniaParameter);
+        }
+    
+        [DbFunction("BiuroPodrozyEntities", "WycieczkiDoCeny")]
+        public virtual IQueryable<WycieczkiDoCeny_Result> WycieczkiDoCeny(Nullable<decimal> cenaWycieczki)
+        {
+            var cenaWycieczkiParameter = cenaWycieczki.HasValue ?
+                new ObjectParameter("cenaWycieczki", cenaWycieczki) :
+                new ObjectParameter("cenaWycieczki", typeof(decimal));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.CreateQuery<WycieczkiDoCeny_Result>("[BiuroPodrozyEntities].[WycieczkiDoCeny](@cenaWycieczki)", cenaWycieczkiParameter);
+        }
+    
+        [DbFunction("BiuroPodrozyEntities", "WycieczkiDoKraju")]
+        public virtual IQueryable<WycieczkiDoKraju_Result> WycieczkiDoKraju(string kraj)
+        {
+            var krajParameter = kraj != null ?
+                new ObjectParameter("kraj", kraj) :
+                new ObjectParameter("kraj", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.CreateQuery<WycieczkiDoKraju_Result>("[BiuroPodrozyEntities].[WycieczkiDoKraju](@kraj)", krajParameter);
+        }
     }
 }

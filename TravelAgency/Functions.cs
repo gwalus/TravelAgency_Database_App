@@ -1,5 +1,9 @@
-﻿using System;
+﻿using MaterialDesignThemes.Wpf;
+using System;
 using System.Collections.Generic;
+using System.Data.Entity;
+using System.Data.Entity.Infrastructure;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,14 +12,20 @@ namespace TravelAgency
 {
     public class Functions
     {
+
+
         public void SetDataContextComboBoxSelected(MainWindow mainWindow)
         {
+            Parameter parameterWindow;
+            string param;
+
             int choose = mainWindow.comboBox.SelectedIndex;
 
             using (var context = new BiuroPodrozyEntities())
             {
                 switch (choose)
                 {
+
                     case 0:
                         mainWindow.viewModel.TableName = ColumnNames.klienci;
                         mainWindow.viewModel.TableContent = context.Klienci.ToList();
@@ -87,6 +97,81 @@ namespace TravelAgency
                             = mainWindow.TextBox7.Text = mainWindow.TextBox8.Text = mainWindow.TextBox9.Text
                             = mainWindow.TextBox10.Text = mainWindow.TextBox11.Text = "";
                         mainWindow.DataContext = mainWindow.viewModel;
+                        break;
+                    case 8:
+                        mainWindow.viewModel.TableContent = context.vRezydenciPodrozy.ToList();
+                        mainWindow.TextBox1.Text = mainWindow.TextBox2.Text = mainWindow.TextBox3.Text
+                            = mainWindow.TextBox4.Text = mainWindow.TextBox5.Text = mainWindow.TextBox6.Text
+                            = mainWindow.TextBox7.Text = mainWindow.TextBox8.Text = mainWindow.TextBox9.Text
+                            = mainWindow.TextBox10.Text = mainWindow.TextBox11.Text = "";
+                        mainWindow.DataContext = mainWindow.viewModel;
+                        break;
+                    case 9:
+                        mainWindow.viewModel.TableContent = context.vIlośćWycieczek
+                            .GroupBy(info => info.Kraj)
+                            .Select(group => new
+                            {
+                                Metric = group.Key,
+                                Count = group.Count()
+                            })
+                            .OrderBy(x => x.Metric)
+                            .ToList();
+                        mainWindow.TextBox1.Text = mainWindow.TextBox2.Text = mainWindow.TextBox3.Text
+                            = mainWindow.TextBox4.Text = mainWindow.TextBox5.Text = mainWindow.TextBox6.Text
+                            = mainWindow.TextBox7.Text = mainWindow.TextBox8.Text = mainWindow.TextBox9.Text
+                            = mainWindow.TextBox10.Text = mainWindow.TextBox11.Text = "";
+                        mainWindow.DataContext = mainWindow.viewModel;
+                        break;
+                    case 10:
+                        mainWindow.viewModel.TableContent = context.vTrwajaceWycieczki.ToList();
+                        mainWindow.TextBox1.Text = mainWindow.TextBox2.Text = mainWindow.TextBox3.Text
+                            = mainWindow.TextBox4.Text = mainWindow.TextBox5.Text = mainWindow.TextBox6.Text
+                            = mainWindow.TextBox7.Text = mainWindow.TextBox8.Text = mainWindow.TextBox9.Text
+                            = mainWindow.TextBox10.Text = mainWindow.TextBox11.Text = "";
+                        mainWindow.DataContext = mainWindow.viewModel;
+                        break;
+                    case 11:
+                        parameterWindow = new Parameter("Rodzaj atrakcji");
+                        parameterWindow.ShowDialog();
+                        param = parameterWindow.parameter;
+
+                        if (!string.IsNullOrWhiteSpace(param))
+                        {
+                            mainWindow.viewModel.TableContent = context.WycieczkiPoRodzajuAtrakcji(param).ToList();
+                            mainWindow.DataContext = mainWindow.viewModel;
+                        }
+                        break;
+                    case 12:
+                        parameterWindow = new Parameter("Id wycieczki");
+                        parameterWindow.ShowDialog();
+                        param = parameterWindow.parameter;
+
+                        if (!string.IsNullOrWhiteSpace(param))
+                        {
+                            mainWindow.viewModel.TableContent = context.UczestnicyWycieczki(int.Parse(param)).ToList();
+                            mainWindow.DataContext = mainWindow.viewModel;
+                        }
+                        break;
+                    case 13:
+                        parameterWindow = new Parameter("Cena");
+                        parameterWindow.ShowDialog();
+                        param = parameterWindow.parameter;
+                        if (!string.IsNullOrWhiteSpace(param))
+                        {
+                            mainWindow.viewModel.TableContent = context.WycieczkiDoCeny(decimal.Parse(param)).ToList();
+                            mainWindow.DataContext = mainWindow.viewModel;
+                        }                        
+                        break;
+                    case 14:
+                        parameterWindow = new Parameter("Kraj");
+                        parameterWindow.ShowDialog();
+                        param = parameterWindow.parameter;
+
+                        if (!string.IsNullOrWhiteSpace(param))
+                        {
+                            mainWindow.viewModel.TableContent = context.WycieczkiDoKraju(param).ToList();
+                            mainWindow.DataContext = mainWindow.viewModel;
+                        }   
                         break;
                     default:
                         break;

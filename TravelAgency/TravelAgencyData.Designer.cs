@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'E:\Semestr IV\Bazy Danych II\Projekt\Biuro Podróży\9 -\TravelAgency\TravelAgency\TravelAgencyData.edmx'. 
+﻿// T4 code generation is enabled for model 'D:\Semestr IV\Bazy Danych II\Projekt\Biuro Podróży\9 - Implementacja kodu wspomagającego aplikację użytkową\TravelAgency\TravelAgency\TravelAgencyData.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.

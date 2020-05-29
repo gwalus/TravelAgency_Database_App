@@ -2,8 +2,12 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Data.Entity;
+using System.Data.Entity.Core;
 using System.Data.Entity.Migrations;
+using System.Data.Entity.SqlServer;
+using System.Data.SqlClient;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -87,17 +91,16 @@ namespace TravelAgency
                                     Email = column9,
                                     Nazwa_firmy = column10,
                                     Regon = column11
-                                };
-
+                                };                                
                                 context.Klienci.Add(record);
                                 context.SaveChanges();
 
-                                MessageBox.Show("Dodano nowy rekord!");
+                                MessageBox.Show("Dodano nowy rekord!");                                
                                 viewModel.TableContent = context.Klienci.ToList();
                             }
-                            catch (Exception)
-                            {
-                                MessageBox.Show("Coś poszło nie tak!");
+                            catch (Exception ex)
+                            {                                
+                                MessageBox.Show(ex.InnerException.InnerException.Message, "Error", MessageBoxButton.OK, MessageBoxImage.Error);
                             }
                         }
                         break;
@@ -127,9 +130,9 @@ namespace TravelAgency
                                 MessageBox.Show("Dodano nowy rekord!");
                                 viewModel.TableContent = context.Uczestnicy.ToList();
                             }
-                            catch (Exception)
+                            catch (Exception ex)
                             {
-                                MessageBox.Show("Coś poszło nie tak!");
+                                MessageBox.Show(ex.InnerException.InnerException.Message, "Error", MessageBoxButton.OK, MessageBoxImage.Error);
                             }
                         }
                         break;
@@ -155,9 +158,9 @@ namespace TravelAgency
                                 MessageBox.Show("Dodano nowy rekord!");
                                 viewModel.TableContent = context.Zamówienia.ToList();
                             }
-                            catch (Exception)
+                            catch (Exception ex)
                             {
-                                MessageBox.Show("Coś poszło nie tak!");
+                                MessageBox.Show(ex.InnerException.InnerException.Message, "Error", MessageBoxButton.OK, MessageBoxImage.Error);
                             }
                         }
                         break;
@@ -183,9 +186,9 @@ namespace TravelAgency
                                 MessageBox.Show("Dodano nowy rekord!");
                                 viewModel.TableContent = context.Wycieczki.ToList();
                             }
-                            catch (Exception)
+                            catch (Exception ex)
                             {
-                                MessageBox.Show("Coś poszło nie tak!");
+                                MessageBox.Show(ex.InnerException.InnerException.Message, "Error", MessageBoxButton.OK, MessageBoxImage.Error);
                             }
                         }
                         break;
@@ -211,9 +214,9 @@ namespace TravelAgency
                                 MessageBox.Show("Dodano nowy rekord!");
                                 viewModel.TableContent = context.Hotele.ToList();
                             }
-                            catch (Exception)
+                            catch (Exception ex)
                             {
-                                MessageBox.Show("Coś poszło nie tak!");
+                                MessageBox.Show(ex.InnerException.InnerException.Message, "Error", MessageBoxButton.OK, MessageBoxImage.Error);
                             }
                         }
                         break;
@@ -239,9 +242,9 @@ namespace TravelAgency
                                 MessageBox.Show("Dodano nowy rekord!");
                                 viewModel.TableContent = context.Rezydenci.ToList();
                             }
-                            catch (Exception)
+                            catch (Exception ex)
                             {
-                                MessageBox.Show("Coś poszło nie tak!");
+                                MessageBox.Show(ex.InnerException.InnerException.Message, "Error", MessageBoxButton.OK, MessageBoxImage.Error);
                             }
                         }
                         break;
@@ -265,9 +268,9 @@ namespace TravelAgency
                                 MessageBox.Show("Dodano nowy rekord!");
                                 viewModel.TableContent = context.Usługi.ToList();
                             }
-                            catch (Exception)
+                            catch (Exception ex)
                             {
-                                MessageBox.Show("Coś poszło nie tak!");
+                                MessageBox.Show(ex.InnerException.InnerException.Message, "Error", MessageBoxButton.OK, MessageBoxImage.Error);
                             }
                         }
                         break;
@@ -288,9 +291,9 @@ namespace TravelAgency
                                 MessageBox.Show("Dodano nowy rekord!");
                                 viewModel.TableContent = context.Atrakcje.ToList();
                             }
-                            catch (Exception)
+                            catch (Exception ex)
                             {
-                                MessageBox.Show("Coś poszło nie tak!");
+                                MessageBox.Show(ex.InnerException.InnerException.Message, "Error", MessageBoxButton.OK, MessageBoxImage.Error);
                             }
                         }
                         break;
@@ -324,9 +327,9 @@ namespace TravelAgency
                                         break;
                                 }
                             }
-                            catch (Exception)
-                            {
-                                MessageBox.Show("Coś poszło nie tak");
+                            catch (Exception ex)
+                            {                                
+                                MessageBox.Show(ex.InnerException.InnerException.Message, "Error", MessageBoxButton.OK, MessageBoxImage.Error);
                             }
                         }
                         break;
@@ -352,9 +355,9 @@ namespace TravelAgency
                                         break;
                                 }
                             }
-                            catch (Exception)
+                            catch (Exception ex)
                             {
-                                MessageBox.Show("Coś poszło nie tak");
+                                MessageBox.Show(ex.InnerException.InnerException.Message, "Error", MessageBoxButton.OK, MessageBoxImage.Error);
                             }
                         }
                         break;
@@ -380,9 +383,9 @@ namespace TravelAgency
                                         break;
                                 }
                             }
-                            catch (Exception)
+                            catch (Exception ex)
                             {
-                                MessageBox.Show("Coś poszło nie tak");
+                                MessageBox.Show(ex.InnerException.InnerException.Message, "Error", MessageBoxButton.OK, MessageBoxImage.Error);
                             }
                         }
                         break;
@@ -408,9 +411,9 @@ namespace TravelAgency
                                         break;
                                 }
                             }
-                            catch (Exception)
+                            catch (Exception ex)
                             {
-                                MessageBox.Show("Coś poszło nie tak");
+                                MessageBox.Show(ex.InnerException.InnerException.Message, "Error", MessageBoxButton.OK, MessageBoxImage.Error);
                             }
                         }
                         break;
@@ -436,9 +439,9 @@ namespace TravelAgency
                                         break;
                                 }
                             }
-                            catch (Exception)
+                            catch (Exception ex)
                             {
-                                MessageBox.Show("Coś poszło nie tak");
+                                MessageBox.Show(ex.InnerException.InnerException.Message, "Error", MessageBoxButton.OK, MessageBoxImage.Error);
                             }
                         }
                         break;
@@ -464,9 +467,9 @@ namespace TravelAgency
                                         break;
                                 }
                             }
-                            catch (Exception)
+                            catch (Exception ex)
                             {
-                                MessageBox.Show("Coś poszło nie tak");
+                                MessageBox.Show(ex.InnerException.InnerException.Message, "Error", MessageBoxButton.OK, MessageBoxImage.Error);
                             }
                         }
                         break;
@@ -492,9 +495,9 @@ namespace TravelAgency
                                         break;
                                 }
                             }
-                            catch (Exception)
+                            catch (Exception ex)
                             {
-                                MessageBox.Show("Coś poszło nie tak");
+                                MessageBox.Show(ex.InnerException.InnerException.Message, "Error", MessageBoxButton.OK, MessageBoxImage.Error);
                             }
                         }
                         break;
@@ -520,9 +523,9 @@ namespace TravelAgency
                                         break;
                                 }
                             }
-                            catch (Exception)
+                            catch (Exception ex)
                             {
-                                MessageBox.Show("Coś poszło nie tak");
+                                MessageBox.Show(ex.InnerException.InnerException.Message, "Error", MessageBoxButton.OK, MessageBoxImage.Error);
                             }
                         }
                         break;
@@ -558,9 +561,9 @@ namespace TravelAgency
                                 viewModel.TableContent = context.Klienci.ToList();
                             }
                         }
-                        catch (Exception)
+                        catch (Exception ex)
                         {
-                            MessageBox.Show("Coś poszło nie tak");
+                            MessageBox.Show(ex.InnerException.InnerException.Message, "Error", MessageBoxButton.OK, MessageBoxImage.Error);
                         }
                         break;
                     case 1:
@@ -587,10 +590,9 @@ namespace TravelAgency
                                 viewModel.TableContent = context.Uczestnicy.ToList();
                             }
                         }
-                        catch (Exception)
+                        catch (Exception ex)
                         {
-                            MessageBox.Show("Coś poszło nie tak");
-                            throw;
+                            MessageBox.Show(ex.InnerException.InnerException.Message, "Error", MessageBoxButton.OK, MessageBoxImage.Error);
                         }
                         break;
                     case 2:
@@ -613,10 +615,9 @@ namespace TravelAgency
                                 viewModel.TableContent = context.Zamówienia.ToList();
                             }
                         }
-                        catch (Exception)
+                        catch (Exception ex)
                         {
-                            MessageBox.Show("Coś poszło nie tak");
-                            throw;
+                            MessageBox.Show(ex.InnerException.InnerException.Message, "Error", MessageBoxButton.OK, MessageBoxImage.Error);
                         }
                         break;
                     case 3:
@@ -639,10 +640,9 @@ namespace TravelAgency
                                 viewModel.TableContent = context.Wycieczki.ToList();
                             }
                         }
-                        catch (Exception)
+                        catch (Exception ex)
                         {
-                            MessageBox.Show("Coś poszło nie tak");
-                            throw;
+                            MessageBox.Show(ex.InnerException.InnerException.Message, "Error", MessageBoxButton.OK, MessageBoxImage.Error);
                         }
                         break;
                     case 4:
@@ -665,10 +665,9 @@ namespace TravelAgency
                                 viewModel.TableContent = context.Hotele.ToList();
                             }
                         }
-                        catch (Exception)
+                        catch (Exception ex)
                         {
-                            MessageBox.Show("Coś poszło nie tak");
-                            throw;
+                            MessageBox.Show(ex.InnerException.InnerException.Message, "Error", MessageBoxButton.OK, MessageBoxImage.Error);
                         }
                         break;
                     case 5:
@@ -691,10 +690,9 @@ namespace TravelAgency
                                 viewModel.TableContent = context.Rezydenci.ToList();
                             }
                         }
-                        catch (Exception)
+                        catch (Exception ex)
                         {
-                            MessageBox.Show("Coś poszło nie tak");
-                            throw;
+                            MessageBox.Show(ex.InnerException.InnerException.Message, "Error", MessageBoxButton.OK, MessageBoxImage.Error);
                         }
                         break;
                     case 6:
@@ -714,10 +712,9 @@ namespace TravelAgency
                                 viewModel.TableContent = context.Usługi.ToList();
                             }
                         }
-                        catch (Exception)
+                        catch (Exception ex)
                         {
-                            MessageBox.Show("Coś poszło nie tak");
-                            throw;
+                            MessageBox.Show(ex.InnerException.InnerException.Message, "Error", MessageBoxButton.OK, MessageBoxImage.Error);
                         }
                         break;
                     case 7:
@@ -735,10 +732,9 @@ namespace TravelAgency
                                 viewModel.TableContent = context.Atrakcje.ToList();
                             }
                         }
-                        catch (Exception)
+                        catch (Exception ex)
                         {
-                            MessageBox.Show("Coś poszło nie tak");
-                            throw;
+                            MessageBox.Show(ex.InnerException.InnerException.Message, "Error", MessageBoxButton.OK, MessageBoxImage.Error);
                         }
                         break;
                     default:
@@ -939,7 +935,7 @@ namespace TravelAgency
 
                             int recordIndex = int.Parse(idRecord);
 
-                            recordZamowienia = context.Zamówienia.FirstOrDefault(x => x.Id_zamówienia== recordIndex);
+                            recordZamowienia = context.Zamówienia.FirstOrDefault(x => x.Id_zamówienia == recordIndex);
                             TextBox1.Text = recordZamowienia.Id_wycieczki.ToString();
                             TextBox2.Text = recordZamowienia.Id_Klienta.ToString();
                             TextBox3.Text = recordZamowienia.Data_zamówienia.ToString();
@@ -959,7 +955,7 @@ namespace TravelAgency
 
                             int recordIndex = int.Parse(idRecord);
 
-                            recordWycieczki = context.Wycieczki.FirstOrDefault(x => x.Id_wycieczki== recordIndex);
+                            recordWycieczki = context.Wycieczki.FirstOrDefault(x => x.Id_wycieczki == recordIndex);
                             TextBox1.Text = recordWycieczki.Id_rezydenta.ToString();
                             TextBox2.Text = recordWycieczki.Kraj;
                             TextBox3.Text = recordWycieczki.Cena_za_osobe.ToString();
@@ -979,7 +975,7 @@ namespace TravelAgency
 
                             int recordIndex = int.Parse(idRecord);
 
-                            recordHotele = context.Hotele.FirstOrDefault(x => x.Id_hotelu== recordIndex);
+                            recordHotele = context.Hotele.FirstOrDefault(x => x.Id_hotelu == recordIndex);
                             TextBox1.Text = recordHotele.Nazwa;
                             TextBox2.Text = recordHotele.Standard.ToString();
                             TextBox3.Text = recordHotele.Kraj;
@@ -999,7 +995,7 @@ namespace TravelAgency
 
                             int recordIndex = int.Parse(idRecord);
 
-                            recordRezydenci = context.Rezydenci.FirstOrDefault(x => x.Id_rezydenta== recordIndex);
+                            recordRezydenci = context.Rezydenci.FirstOrDefault(x => x.Id_rezydenta == recordIndex);
                             TextBox1.Text = recordRezydenci.Imię;
                             TextBox2.Text = recordRezydenci.Nazwisko;
                             TextBox3.Text = recordRezydenci.Telefon;
@@ -1019,11 +1015,11 @@ namespace TravelAgency
 
                             int recordIndex = int.Parse(idRecord);
 
-                            recordUslugi = context.Usługi.FirstOrDefault(x => x.Id_usługi== recordIndex);
+                            recordUslugi = context.Usługi.FirstOrDefault(x => x.Id_usługi == recordIndex);
                             TextBox1.Text = recordUslugi.Id_wycieczki.ToString();
                             TextBox2.Text = recordUslugi.Wyżywienie;
                             TextBox3.Text = recordUslugi.Ubezpieczenie;
-                            TextBox4.Text = recordUslugi.Bagaż;                            
+                            TextBox4.Text = recordUslugi.Bagaż;
                         }
                         break;
                     case 7:
@@ -1036,13 +1032,13 @@ namespace TravelAgency
 
                             int recordIndex = int.Parse(idRecord);
 
-                            recordAtrakcje = context.Atrakcje.FirstOrDefault(x => x.Id_atrakcji== recordIndex);
+                            recordAtrakcje = context.Atrakcje.FirstOrDefault(x => x.Id_atrakcji == recordIndex);
                             TextBox1.Text = recordAtrakcje.Id_wycieczki.ToString();
-                            TextBox2.Text = recordAtrakcje.Rodzaj;                            
+                            TextBox2.Text = recordAtrakcje.Rodzaj;
                         }
                         break;
                 }
-            }            
+            }
         }
     }
 }

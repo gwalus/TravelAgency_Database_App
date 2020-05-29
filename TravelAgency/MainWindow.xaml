@@ -73,6 +73,13 @@
                 <ComboBoxItem Content="Rezydenci"/>
                 <ComboBoxItem Content="Usługi"/>
                 <ComboBoxItem Content="Atrakcje"/>
+                <ComboBoxItem Content="Rezydenci podróży(V)"/>
+                <ComboBoxItem Content="Lista krajów(V)"/>
+                <ComboBoxItem Content="Wycieczki w trakcie(V)"/>
+                <ComboBoxItem Content="Wycieczki po atrakcji(F)"/>
+                <ComboBoxItem Content="Uczestnicy wycieczki(F)"/>
+                <ComboBoxItem Content="Wycieczki do ceny(F)"/>
+                <ComboBoxItem Content="Wycieczki do kraju(F)"/>
             </ComboBox>
             <ToggleButton x:Name="ToggleButtonDodajRekord"/>
             <RadioButton x:Name="RadioButtonDodaj" Style="{StaticResource MaterialDesignOutlinedButton}" Margin="5" Background="{Binding RelativeSource={RelativeSource Self}, Path=IsChecked, Converter={StaticResource BooleanToForegroundConverter}}"
@@ -81,7 +88,7 @@
                           Content="Usuń rekord" Click="RadioButtonDeleteRecord_Click"/>
             <RadioButton x:Name="RadioButtonAktualizuj" Style="{StaticResource MaterialDesignOutlinedButton}" Margin="5" Background="{Binding RelativeSource={RelativeSource Self}, Path=IsChecked, Converter={StaticResource BooleanToForegroundConverter}}"
                           Content="Aktualizuj rekord" Click="RadioButtonUpdate_Click"/>
-            <TextBlock Style="{StaticResource MaterialDesignSubtitle1TextBlock}" TextAlignment="Center" VerticalAlignment="Center" FontSize="20" Text="ID rekordu do aktualizaji:" Width="auto" Margin="5"/>
+            <TextBlock Style="{StaticResource MaterialDesignSubtitle1TextBlock}" TextAlignment="Center" VerticalAlignment="Center" FontSize="20" Text="ID rekordu do aktualizacji:" Width="auto" Margin="5"/>
             <TextBox x:Name="TextBoxIdToUpdate" Width="80" Margin="5" TextAlignment="Center" HorizontalContentAlignment="Left" VerticalContentAlignment="Center"/>
         </StackPanel>
 

@@ -1,0 +1,3 @@
+/.vs
+/TravelAgency/bin
+/TravelAgency/obj

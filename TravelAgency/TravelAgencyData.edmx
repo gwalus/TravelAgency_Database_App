@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="BiuroPodrozyModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="BiuroPodrozyModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Atrakcje">
           <Key>
             <PropertyRef Name="Id_atrakcji" />
@@ -20,24 +20,24 @@
           <Property Name="Id_hotelu" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Nazwa" Type="nvarchar" MaxLength="50" />
           <Property Name="Standard" Type="int" />
-          <Property Name="Kraj" Type="nvarchar" MaxLength="25" />
-          <Property Name="Miasto" Type="nvarchar" MaxLength="30" />
-          <Property Name="Adres" Type="nvarchar" MaxLength="30" />
+          <Property Name="Kraj" Type="nvarchar" MaxLength="60" />
+          <Property Name="Miasto" Type="nvarchar" MaxLength="60" />
+          <Property Name="Adres" Type="nvarchar" MaxLength="60" />
           <Property Name="Telefon" Type="nvarchar" MaxLength="20" />
-          <Property Name="Witryna" Type="nvarchar" MaxLength="50" />
+          <Property Name="Witryna" Type="nvarchar" MaxLength="60" />
         </EntityType>
         <EntityType Name="Klienci">
           <Key>
             <PropertyRef Name="Id_klienta" />
           </Key>
           <Property Name="Id_klienta" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Imię" Type="nvarchar" MaxLength="40" />
-          <Property Name="Nazwisko" Type="nvarchar" MaxLength="25" />
+          <Property Name="Imię" Type="nvarchar" MaxLength="50" />
+          <Property Name="Nazwisko" Type="nvarchar" MaxLength="50" />
           <Property Name="Pesel" Type="nvarchar" MaxLength="12" />
-          <Property Name="Adres" Type="nvarchar" MaxLength="30" />
-          <Property Name="Miasto" Type="nvarchar" MaxLength="30" />
+          <Property Name="Adres" Type="nvarchar" MaxLength="100" />
+          <Property Name="Miasto" Type="nvarchar" MaxLength="100" />
           <Property Name="Kod_pocztowy" Type="nvarchar" MaxLength="6" />
-          <Property Name="Kraj" Type="nvarchar" MaxLength="25" />
+          <Property Name="Kraj" Type="nvarchar" MaxLength="100" />
           <Property Name="Telefon" Type="nvarchar" MaxLength="20" />
           <Property Name="Email" Type="nvarchar" MaxLength="100" />
           <Property Name="Nazwa_firmy" Type="nvarchar" MaxLength="50" />
@@ -49,12 +49,12 @@
           </Key>
           <Property Name="Id_rezydenta" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Imię" Type="nvarchar" MaxLength="40" />
-          <Property Name="Nazwisko" Type="nvarchar" MaxLength="25" />
+          <Property Name="Nazwisko" Type="nvarchar" MaxLength="40" />
           <Property Name="Telefon" Type="nvarchar" MaxLength="20" />
-          <Property Name="Adres" Type="nvarchar" MaxLength="30" />
-          <Property Name="Miasto" Type="nvarchar" MaxLength="30" />
-          <Property Name="Kraj" Type="nvarchar" MaxLength="25" />
-          <Property Name="Email" Type="nvarchar" MaxLength="15" />
+          <Property Name="Adres" Type="nvarchar" MaxLength="100" />
+          <Property Name="Miasto" Type="nvarchar" MaxLength="100" />
+          <Property Name="Kraj" Type="nvarchar" MaxLength="60" />
+          <Property Name="Email" Type="nvarchar" MaxLength="100" />
         </EntityType>
         <EntityType Name="sysdiagrams">
           <Key>
@@ -73,14 +73,14 @@
           <Property Name="Id_uczestnika" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Id_klienta" Type="int" />
           <Property Name="Imię" Type="nvarchar" MaxLength="40" />
-          <Property Name="Nazwisko" Type="nvarchar" MaxLength="25" />
+          <Property Name="Nazwisko" Type="nvarchar" MaxLength="50" />
           <Property Name="Pesel" Type="nvarchar" MaxLength="11" />
           <Property Name="DataUrodzenia" Type="date" />
-          <Property Name="MiejsceUrodzenia" Type="nvarchar" MaxLength="40" />
-          <Property Name="Adres" Type="nvarchar" MaxLength="30" />
-          <Property Name="Miasto" Type="nvarchar" MaxLength="30" />
+          <Property Name="MiejsceUrodzenia" Type="nvarchar" MaxLength="70" />
+          <Property Name="Adres" Type="nvarchar" MaxLength="70" />
+          <Property Name="Miasto" Type="nvarchar" MaxLength="70" />
           <Property Name="Kod_pocztowy" Type="nvarchar" MaxLength="6" />
-          <Property Name="Kraj" Type="nvarchar" MaxLength="25" />
+          <Property Name="Kraj" Type="nvarchar" MaxLength="70" />
           <Property Name="Telefon" Type="nvarchar" MaxLength="20" />
         </EntityType>
         <EntityType Name="Usługi">
@@ -99,8 +99,8 @@
           </Key>
           <Property Name="Id_wycieczki" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Id_rezydenta" Type="int" />
-          <Property Name="Kraj" Type="nvarchar" MaxLength="25" />
-          <Property Name="Cena_za_osobe" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="Kraj" Type="nvarchar" MaxLength="70" />
+          <Property Name="Cena_za_osobe" Type="decimal" Precision="20" Scale="0" />
           <Property Name="Ilość_dostępnych_miejsc" Type="int" />
           <Property Name="Ilość_miejsc" Type="int" />
           <Property Name="Data_wyjazdu" Type="date" />
@@ -134,6 +134,38 @@
           </Key>
           <Property Name="Id_zamówienia" Type="int" Nullable="false" />
           <Property Name="Id_uczestnika" Type="int" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'BiuroPodrozy.dbo.vIlośćWycieczek' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="vIlośćWycieczek">
+          <Key>
+            <PropertyRef Name="Id_wycieczki" />
+          </Key>
+          <Property Name="Kraj" Type="nvarchar" MaxLength="25" />
+          <Property Name="Id_wycieczki" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'BiuroPodrozy.dbo.vRezydenciPodrozy' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="vRezydenciPodrozy">
+          <Key>
+            <PropertyRef Name="Id_wycieczki" />
+          </Key>
+          <Property Name="Id_wycieczki" Type="int" Nullable="false" />
+          <Property Name="Imię" Type="nvarchar" MaxLength="40" />
+          <Property Name="Nazwisko" Type="nvarchar" MaxLength="25" />
+          <Property Name="Telefon" Type="nvarchar" MaxLength="20" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'BiuroPodrozy.dbo.vTrwajaceWycieczki' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="vTrwajaceWycieczki">
+          <Key>
+            <PropertyRef Name="Id_zamówienia" />
+          </Key>
+          <Property Name="Id_zamówienia" Type="int" Nullable="false" />
+          <Property Name="Status" Type="nvarchar" MaxLength="25" />
+          <Property Name="Kraj" Type="nvarchar" MaxLength="25" />
+          <Property Name="Data_wyjazdu" Type="date" />
+          <Property Name="Data_powrotu" Type="date" />
         </EntityType>
         <Association Name="FK__Uczestnic__Id_kl__3A81B327">
           <End Role="Klienci" Type="Self.Klienci" Multiplicity="0..1" />
@@ -255,6 +287,62 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Function Name="UczestnicyWycieczki" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="idZamowienia" Type="int" Mode="In" />
+          <ReturnType>
+            <CollectionType>
+              <RowType>
+                <Property Name="Imię" Type="nvarchar" MaxLength="40" />
+                <Property Name="Nazwisko" Type="nvarchar" MaxLength="50" />
+                <Property Name="Telefon" Type="nvarchar" MaxLength="20" />
+              </RowType>
+            </CollectionType>
+          </ReturnType>
+        </Function>
+        <Function Name="WycieczkiDoCeny" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="cenaWycieczki" Type="decimal" Mode="In" />
+          <ReturnType>
+            <CollectionType>
+              <RowType>
+                <Property Name="Id_wycieczki" Type="int" Nullable="false" />
+                <Property Name="Kraj" Type="nvarchar" MaxLength="70" />
+                <Property Name="Cena_za_osobe" Type="decimal" Precision="20" Scale="0" />
+              </RowType>
+            </CollectionType>
+          </ReturnType>
+        </Function>
+        <Function Name="WycieczkiDoKraju" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="kraj" Type="nvarchar" Mode="In" />
+          <ReturnType>
+            <CollectionType>
+              <RowType>
+                <Property Name="Id_wycieczki" Type="int" Nullable="false" />
+                <Property Name="Kraj" Type="nvarchar" MaxLength="70" />
+                <Property Name="Cena_za_osobe" Type="decimal" Precision="20" Scale="0" />
+                <Property Name="Data_wyjazdu" Type="date" />
+                <Property Name="Data_powrotu" Type="date" />
+                <Property Name="Wyżywienie" Type="nvarchar" MaxLength="30" />
+                <Property Name="Ubezpieczenie" Type="nvarchar" MaxLength="30" />
+                <Property Name="Bagaż" Type="nvarchar" MaxLength="30" />
+                <Property Name="Rodzaj atrakcji" Type="nvarchar" MaxLength="50" />
+              </RowType>
+            </CollectionType>
+          </ReturnType>
+        </Function>
+        <Function Name="WycieczkiPoRodzajuAtrakcji" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="atrakcja" Type="nvarchar" Mode="In" />
+          <ReturnType>
+            <CollectionType>
+              <RowType>
+                <Property Name="Id_wycieczki" Type="int" Nullable="false" />
+                <Property Name="Kraj" Type="nvarchar" MaxLength="70" />
+                <Property Name="Rodzaj" Type="nvarchar" MaxLength="50" />
+                <Property Name="Data_wyjazdu" Type="date" />
+                <Property Name="Data_powrotu" Type="date" />
+              </RowType>
+            </CollectionType>
+          </ReturnType>
+        </Function>
         <EntityContainer Name="BiuroPodrozyModelStoreContainer">
           <EntitySet Name="Atrakcje" EntityType="Self.Atrakcje" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Hotele" EntityType="Self.Hotele" Schema="dbo" store:Type="Tables" />
@@ -267,6 +355,29 @@
           <EntitySet Name="Wycieczki_Hotele" EntityType="Self.Wycieczki_Hotele" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Zamówienia" EntityType="Self.Zamówienia" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Zamówienia_Uczestnicy" EntityType="Self.Zamówienia_Uczestnicy" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="vIlośćWycieczek" EntityType="Self.vIlośćWycieczek" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [vIlośćWycieczek].[Kraj] AS [Kraj], 
+    [vIlośćWycieczek].[Id_wycieczki] AS [Id_wycieczki]
+    FROM [dbo].[vIlośćWycieczek] AS [vIlośćWycieczek]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="vRezydenciPodrozy" EntityType="Self.vRezydenciPodrozy" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [vRezydenciPodrozy].[Id_wycieczki] AS [Id_wycieczki], 
+    [vRezydenciPodrozy].[Imię] AS [Imię], 
+    [vRezydenciPodrozy].[Nazwisko] AS [Nazwisko], 
+    [vRezydenciPodrozy].[Telefon] AS [Telefon]
+    FROM [dbo].[vRezydenciPodrozy] AS [vRezydenciPodrozy]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="vTrwajaceWycieczki" EntityType="Self.vTrwajaceWycieczki" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [vTrwajaceWycieczki].[Id_zamówienia] AS [Id_zamówienia], 
+    [vTrwajaceWycieczki].[Status] AS [Status], 
+    [vTrwajaceWycieczki].[Kraj] AS [Kraj], 
+    [vTrwajaceWycieczki].[Data_wyjazdu] AS [Data_wyjazdu], 
+    [vTrwajaceWycieczki].[Data_powrotu] AS [Data_powrotu]
+    FROM [dbo].[vTrwajaceWycieczki] AS [vTrwajaceWycieczki]</DefiningQuery>
+          </EntitySet>
           <AssociationSet Name="FK__Uczestnic__Id_kl__3A81B327" Association="Self.FK__Uczestnic__Id_kl__3A81B327">
             <End Role="Klienci" EntitySet="Klienci" />
             <End Role="Uczestnicy" EntitySet="Uczestnicy" />
@@ -308,8 +419,7 @@
             <End Role="Zamówienia_Uczestnicy" EntitySet="Zamówienia_Uczestnicy" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="BiuroPodrozyModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -329,11 +439,11 @@
           <Property Name="Id_hotelu" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Nazwa" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Standard" Type="Int32" />
-          <Property Name="Kraj" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
-          <Property Name="Miasto" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
-          <Property Name="Adres" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="Kraj" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+          <Property Name="Miasto" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+          <Property Name="Adres" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
           <Property Name="Telefon" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
-          <Property Name="Witryna" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Witryna" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="Wycieczki" Relationship="Self.Wycieczki_Hotele" FromRole="Hotele" ToRole="Wycieczki" />
         </EntityType>
         <EntityType Name="Klienci">
@@ -341,13 +451,13 @@
             <PropertyRef Name="Id_klienta" />
           </Key>
           <Property Name="Id_klienta" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Imię" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
-          <Property Name="Nazwisko" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Name="Imię" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Nazwisko" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Pesel" Type="String" MaxLength="12" FixedLength="false" Unicode="true" />
-          <Property Name="Adres" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
-          <Property Name="Miasto" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="Adres" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Miasto" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="Kod_pocztowy" Type="String" MaxLength="6" FixedLength="false" Unicode="true" />
-          <Property Name="Kraj" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Name="Kraj" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="Telefon" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
           <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="Nazwa_firmy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
@@ -361,12 +471,12 @@
           </Key>
           <Property Name="Id_rezydenta" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Imię" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
-          <Property Name="Nazwisko" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Name="Nazwisko" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
           <Property Name="Telefon" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
-          <Property Name="Adres" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
-          <Property Name="Miasto" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
-          <Property Name="Kraj" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
-          <Property Name="Email" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="Adres" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Miasto" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Kraj" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="Wycieczki" Relationship="Self.FK_Wycieczki_Rezydenci" FromRole="Rezydenci" ToRole="Wycieczki" />
         </EntityType>
         <EntityType Name="sysdiagrams">
@@ -386,14 +496,14 @@
           <Property Name="Id_uczestnika" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Id_klienta" Type="Int32" />
           <Property Name="Imię" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
-          <Property Name="Nazwisko" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Name="Nazwisko" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Pesel" Type="String" MaxLength="11" FixedLength="false" Unicode="true" />
           <Property Name="DataUrodzenia" Type="DateTime" Precision="0" />
-          <Property Name="MiejsceUrodzenia" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
-          <Property Name="Adres" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
-          <Property Name="Miasto" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="MiejsceUrodzenia" Type="String" MaxLength="70" FixedLength="false" Unicode="true" />
+          <Property Name="Adres" Type="String" MaxLength="70" FixedLength="false" Unicode="true" />
+          <Property Name="Miasto" Type="String" MaxLength="70" FixedLength="false" Unicode="true" />
           <Property Name="Kod_pocztowy" Type="String" MaxLength="6" FixedLength="false" Unicode="true" />
-          <Property Name="Kraj" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Name="Kraj" Type="String" MaxLength="70" FixedLength="false" Unicode="true" />
           <Property Name="Telefon" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="Klienci" Relationship="Self.FK__Uczestnic__Id_kl__3A81B327" FromRole="Uczestnicy" ToRole="Klienci" />
           <NavigationProperty Name="Zamówienia" Relationship="Self.Zamówienia_Uczestnicy" FromRole="Uczestnicy" ToRole="Zamówienia" />
@@ -415,8 +525,8 @@
           </Key>
           <Property Name="Id_wycieczki" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Id_rezydenta" Type="Int32" />
-          <Property Name="Kraj" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
-          <Property Name="Cena_za_osobe" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="Kraj" Type="String" MaxLength="70" FixedLength="false" Unicode="true" />
+          <Property Name="Cena_za_osobe" Type="Decimal" Precision="20" Scale="0" />
           <Property Name="Ilość_dostępnych_miejsc" Type="Int32" />
           <Property Name="Ilość_miejsc" Type="Int32" />
           <Property Name="Data_wyjazdu" Type="DateTime" Precision="0" />
@@ -565,7 +675,76 @@
             <End Role="Uczestnicy" EntitySet="Uczestnicy" />
             <End Role="Zamówienia" EntitySet="Zamówienia" />
           </AssociationSet>
+          <EntitySet Name="vRezydenciPodrozy" EntityType="BiuroPodrozyModel.vRezydenciPodrozy" />
+          <EntitySet Name="vTrwajaceWycieczki" EntityType="BiuroPodrozyModel.vTrwajaceWycieczki" />
+          <EntitySet Name="vIlośćWycieczek" EntityType="BiuroPodrozyModel.vIlośćWycieczek" />
+          <FunctionImport Name="WycieczkiPoRodzajuAtrakcji" IsComposable="true" ReturnType="Collection(BiuroPodrozyModel.WycieczkiPoRodzajuAtrakcji_Result)">
+          <Parameter Name="atrakcja" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="UczestnicyWycieczki" IsComposable="true" ReturnType="Collection(BiuroPodrozyModel.UczestnicyWycieczki_Result)">
+            <Parameter Name="idZamowienia" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="WycieczkiDoCeny" IsComposable="true" ReturnType="Collection(BiuroPodrozyModel.WycieczkiDoCeny_Result)">
+            <Parameter Name="cenaWycieczki" Mode="In" Type="Decimal" />
+          </FunctionImport>
+          <FunctionImport Name="WycieczkiDoKraju" IsComposable="true" ReturnType="Collection(BiuroPodrozyModel.WycieczkiDoKraju_Result)">
+            <Parameter Name="kraj" Mode="In" Type="String" />
+          </FunctionImport>
         </EntityContainer>
+        <EntityType Name="vRezydenciPodrozy">
+          <Key>
+            <PropertyRef Name="Id_wycieczki" />
+          </Key>
+          <Property Name="Id_wycieczki" Type="Int32" Nullable="false" />
+          <Property Name="Imię" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+          <Property Name="Nazwisko" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Name="Telefon" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="vTrwajaceWycieczki">
+          <Key>
+            <PropertyRef Name="Id_zamówienia" />
+          </Key>
+          <Property Name="Id_zamówienia" Type="Int32" Nullable="false" />
+          <Property Name="Status" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Name="Kraj" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Name="Data_wyjazdu" Type="DateTime" Precision="0" />
+          <Property Name="Data_powrotu" Type="DateTime" Precision="0" />
+        </EntityType>
+        <EntityType Name="vIlośćWycieczek">
+          <Key>
+            <PropertyRef Name="Id_wycieczki" />
+          </Key>
+          <Property Name="Kraj" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Name="Id_wycieczki" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <ComplexType Name="WycieczkiPoRodzajuAtrakcji_Result">
+          <Property Type="Int32" Name="Id_wycieczki" Nullable="false" />
+          <Property Type="String" Name="Kraj" Nullable="true" MaxLength="70" />
+          <Property Type="String" Name="Rodzaj" Nullable="true" MaxLength="50" />
+          <Property Type="DateTime" Name="Data_wyjazdu" Nullable="true" Precision="10" />
+          <Property Type="DateTime" Name="Data_powrotu" Nullable="true" Precision="10" />
+        </ComplexType>
+        <ComplexType Name="UczestnicyWycieczki_Result">
+          <Property Type="String" Name="Imię" Nullable="true" MaxLength="40" />
+          <Property Type="String" Name="Nazwisko" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Telefon" Nullable="true" MaxLength="20" />
+        </ComplexType>
+        <ComplexType Name="WycieczkiDoCeny_Result">
+          <Property Type="Int32" Name="Id_wycieczki" Nullable="false" />
+          <Property Type="String" Name="Kraj" Nullable="true" MaxLength="70" />
+          <Property Type="Decimal" Name="Cena_za_osobe" Nullable="true" Precision="20" Scale="0" />
+        </ComplexType>
+        <ComplexType Name="WycieczkiDoKraju_Result">
+          <Property Type="Int32" Name="Id_wycieczki" Nullable="false" />
+          <Property Type="String" Name="Kraj" Nullable="true" MaxLength="70" />
+          <Property Type="Decimal" Name="Cena_za_osobe" Nullable="true" Precision="20" Scale="0" />
+          <Property Type="DateTime" Name="Data_wyjazdu" Nullable="true" Precision="10" />
+          <Property Type="DateTime" Name="Data_powrotu" Nullable="true" Precision="10" />
+          <Property Type="String" Name="Wyżywienie" Nullable="true" MaxLength="30" />
+          <Property Type="String" Name="Ubezpieczenie" Nullable="true" MaxLength="30" />
+          <Property Type="String" Name="Bagaż" Nullable="true" MaxLength="30" />
+          <Property Type="String" Name="Rodzaj_atrakcji" Nullable="true" MaxLength="50" />
+        </ComplexType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -711,6 +890,79 @@
               <ScalarProperty Name="Id_zamówienia" ColumnName="Id_zamówienia" />
             </EndProperty>
           </AssociationSetMapping>
+          <EntitySetMapping Name="vRezydenciPodrozy">
+            <EntityTypeMapping TypeName="BiuroPodrozyModel.vRezydenciPodrozy">
+              <MappingFragment StoreEntitySet="vRezydenciPodrozy">
+                <ScalarProperty Name="Telefon" ColumnName="Telefon" />
+                <ScalarProperty Name="Nazwisko" ColumnName="Nazwisko" />
+                <ScalarProperty Name="Imię" ColumnName="Imię" />
+                <ScalarProperty Name="Id_wycieczki" ColumnName="Id_wycieczki" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="vTrwajaceWycieczki">
+            <EntityTypeMapping TypeName="BiuroPodrozyModel.vTrwajaceWycieczki">
+              <MappingFragment StoreEntitySet="vTrwajaceWycieczki">
+                <ScalarProperty Name="Data_powrotu" ColumnName="Data_powrotu" />
+                <ScalarProperty Name="Data_wyjazdu" ColumnName="Data_wyjazdu" />
+                <ScalarProperty Name="Kraj" ColumnName="Kraj" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Id_zamówienia" ColumnName="Id_zamówienia" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="vIlośćWycieczek">
+            <EntityTypeMapping TypeName="BiuroPodrozyModel.vIlośćWycieczek">
+              <MappingFragment StoreEntitySet="vIlośćWycieczek">
+                <ScalarProperty Name="Id_wycieczki" ColumnName="Id_wycieczki" />
+                <ScalarProperty Name="Kraj" ColumnName="Kraj" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="WycieczkiPoRodzajuAtrakcji" FunctionName="BiuroPodrozyModel.Store.WycieczkiPoRodzajuAtrakcji">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="BiuroPodrozyModel.WycieczkiPoRodzajuAtrakcji_Result">
+                <ScalarProperty Name="Id_wycieczki" ColumnName="Id_wycieczki" />
+                <ScalarProperty Name="Kraj" ColumnName="Kraj" />
+                <ScalarProperty Name="Rodzaj" ColumnName="Rodzaj" />
+                <ScalarProperty Name="Data_wyjazdu" ColumnName="Data_wyjazdu" />
+                <ScalarProperty Name="Data_powrotu" ColumnName="Data_powrotu" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="UczestnicyWycieczki" FunctionName="BiuroPodrozyModel.Store.UczestnicyWycieczki">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="BiuroPodrozyModel.UczestnicyWycieczki_Result">
+                <ScalarProperty Name="Imię" ColumnName="Imię" />
+                <ScalarProperty Name="Nazwisko" ColumnName="Nazwisko" />
+                <ScalarProperty Name="Telefon" ColumnName="Telefon" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="WycieczkiDoCeny" FunctionName="BiuroPodrozyModel.Store.WycieczkiDoCeny">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="BiuroPodrozyModel.WycieczkiDoCeny_Result">
+                <ScalarProperty Name="Id_wycieczki" ColumnName="Id_wycieczki" />
+                <ScalarProperty Name="Kraj" ColumnName="Kraj" />
+                <ScalarProperty Name="Cena_za_osobe" ColumnName="Cena_za_osobe" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="WycieczkiDoKraju" FunctionName="BiuroPodrozyModel.Store.WycieczkiDoKraju">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="BiuroPodrozyModel.WycieczkiDoKraju_Result">
+                <ScalarProperty Name="Id_wycieczki" ColumnName="Id_wycieczki" />
+                <ScalarProperty Name="Kraj" ColumnName="Kraj" />
+                <ScalarProperty Name="Cena_za_osobe" ColumnName="Cena_za_osobe" />
+                <ScalarProperty Name="Data_wyjazdu" ColumnName="Data_wyjazdu" />
+                <ScalarProperty Name="Data_powrotu" ColumnName="Data_powrotu" />
+                <ScalarProperty Name="Wyżywienie" ColumnName="Wyżywienie" />
+                <ScalarProperty Name="Ubezpieczenie" ColumnName="Ubezpieczenie" />
+                <ScalarProperty Name="Bagaż" ColumnName="Bagaż" />
+                <ScalarProperty Name="Rodzaj_atrakcji" ColumnName="Rodzaj atrakcji" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>
